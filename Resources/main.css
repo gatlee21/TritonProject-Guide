@@ -1,0 +1,42 @@
+/* 
+    Graham Atlee
+    5/3/2020
+*/
+
+
+#nav-bar {
+    background-color: #040A13;
+    max-height: 100px;
+}
+
+#logo{
+    height: auto;
+}
+
+#main-media {
+    text-align: center;
+}
+
+#info{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#footer {
+    background-color: #F8F8F8;
+    margin-top: 100px;
+}
+
+#divider {
+    background-color: #189CD8;
+    width: 1000px;
+    height: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#title-page {
+    text-align: center;
+    margin-top: 50px;
+}
+
