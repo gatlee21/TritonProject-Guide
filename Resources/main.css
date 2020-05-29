@@ -3,6 +3,14 @@
     5/3/2020
 */
 
+/* @font-face {
+    font-family: myFirstFont;
+    src: url(segoe.tff);
+}
+
+* {
+    font-family: myFirstFont;
+} */
 
 #nav-bar {
     background-color: #040A13;
