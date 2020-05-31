@@ -40,7 +40,7 @@
       </div>
  
      <div id="title-page" class="container">
-         <h4>Triton Project Mechanical Setup</h4>
+         <h4>Offical Triton Assembly Tutorial</h4>
      </div>
 
      <div id="divider" class="container"></div>
@@ -57,30 +57,237 @@
              3 main parts which can be bought off the shelf: the display,
              vr headstrap, and the optical reflector. 
             </p>
-            <p><b>Components that can be bought online:</b></p>
-            <ol style="text-align: left;">
-                <a href="https://www.aliexpress.com/item/32829445048.html?spm=2114.12010612.8148356.1.6adf72c1OYqabt&spm=a2g0o.store_home.hotSpots_45228712.0">
-                 <li>6 inch 2k LCD screen</li>
-                </a>
-                <a href="https://www.vive.com/us/accessory/standard-strap/">
-                    <li>HTC Vive standard strap</li>
-                </a>
-                <a href="https://www.aliexpress.com/item/4000470641843.html?spm=a2g0o.productlist.0.0.2fba5b1151lNbw&algo_pvid=dfc10ecf-d3b3-42b9-bd27-75a266abe30c&algo_expid=dfc10ecf-d3b3-42b9-bd27-75a266abe30c-1&btsid=0ab6f83915885443795213752e195b&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">
-                    <li>Optical Reflector</li>
-                </a>
-            </ol>
             <p style="text-align: left;">
-                The parts are 3D printed using consumer grade 3D printers and materials. 
-                The goal is to have an easily reproduced AR headset that anyone can put together.
+             Below I've listed the offical bill of materials (BOM). I've designated links to where
+             you can purchase these parts, although there are a few alternatives
+             as to where you can buy them. I've listed the estimated price of these
+             parts but I have not factored in cost of shipping. 
             </p>
-            <button id="Download" type="button" class="btn btn-success">Download 3D CAD Files</button>
-
+            <p style="text-align: left;">
+             Assembling a Triton should take less than 30 minutes if you're familiar with 
+             having built a Project North Star. If this is your first time assembling an
+             AR headset it may take closer to an hour. I've tried my best to provide clear and
+             concise instructions to build a Triton Headset. This guide is still a work in progress
+             and I appreciate constructive feedback to make it better. 
+            </p>
           </div>
           <div class="col">
-            <img src="Images/kit.png" width="500" height="375"alt="">
+            <img src="Images/hardware_overview.jpg" width="500" height="375"alt="">
           </div>
         </div>
     </div>
+
+    <div class="container" id="BOM" style="margin-top: 50px;">
+      <p><b>Official BOM</b></p>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Ref.</th>
+            <th scope="col">Part name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Link to Purchase</th>
+            <th scope="col">Est. Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">A</th>
+            <td>6 inch 2k LCD display</td>
+            <td>1</td>
+            <td><a href="https://www.aliexpress.com/item/32829445048.html?spm=a2g0s.9042311.0.0.ca294c4dpF4qkn">
+              Aliexpress
+            </a></td> 
+            <td>$80.00</td>
+          </tr>
+          <tr>
+            <th scope="row">B</th>
+            <td>AR Glass Reflectors</td>
+            <td>1</td>
+            <td>Aliexpress</td>
+            <td>$32.99</td>
+          </tr>
+          <tr>
+            <th scope="row">C</th>
+            <td>HTC Vive standard strap</td>
+            <td>1</td>
+            <td>HTC Valve</td>
+            <td>$19.99</td>
+          </tr>
+          <tr>
+            <th scope="row">D</th>
+            <td>Leap Motion</td>
+            <td>1</td>
+            <td>Amazon</td>
+            <td>$79.99</td>
+          </tr>
+          <tr>
+            <th scope="row">E</th>
+            <td>6mm Philips Screws</td>
+            <td>100</td>
+            <td>McMaster Carr</td>
+            <td>$4.66</td>
+          </tr>
+          <tr>
+            <th scope="row">F</th>
+            <td>3D Printed Parts</td>
+            <td>17</td>
+            <td>DIY</td>
+            <td>~$6.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Note: the shipping time when ordering from Aliexpress may take a while. Just be patient,
+        I've ordered many times from them and have always received my package.
+      </p>
+    </div>
+    <!-- END OF BOM TABLE -->
+
+    <div id="divider" class="container"></div>
+
+    <!-- DISPLAY -->
+    <div class="container" id="display" style="margin-top: 50px;">
+      <h3 style="margin-bottom: 25px;">Notes:</h3>
+      <h4>A. 6 inch 2k LCD display</h4>
+      <p>This LCD panel was develped by the WeiWei team. The resolution listed is 
+        1440(RGB)x2560 with a refresh rate of 60Hz. What is shipped is shown below. 
+      </p>
+      <img src="Images/2kdisplay.jpg" alt="" width="500" height="356">
+
+      <h5 style="margin-top: 10px;">Refresh rate</h5>
+      <p>I recognize that 60Hz is considered to be on the low end for VR/AR HMDs. while
+        there are other display options that offer 90Hz to 120Hz those are considerbaly more
+        expensive. The 6 inch display works well for what I wanted on the Triton:
+        <ul>
+          <li>High display brightness</li>
+          <li>Covers the entire length to achieve wide FOV</li>
+          <li>Affordable price inline with the projects budget</li>
+        </ul>
+        I still encourage expeirmentation with different display types but this is what will 
+        remain listed in the offical spec for now. 
+      </p>
+
+    <b>Other important notes:</b>
+     <ul>
+       <li>The flex cable attached to the display is sensitive making it prone to terring if not
+         properly handled.
+       </li>
+       <li>Make sure to request the 60Hz driver board from the WeiWei team</li>
+       <li>Make sure to order both the LCD display and the driver</li>
+     </ul>
+    </div>
+    <!-- END OF DISPLAY -->
+
+    <div class="container" id="arglass" style="margin-top: 50px;">
+      <h4>B. Reflectors</h4>
+      <p>The reflectors are not custom designed by me. The reflectors come from an 
+        existing product called Intelligent Ar Glasses 3D. Anyone with expeirence in AR
+        can easily see that these glasses are in the least bit intelligent. With the Triton
+        Project we are going to turn this toy into an advanced AR system. 
+      </p>
+     
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img src="Images/arglass.jpg" alt="" width="500" height="356">
+            </div>
+            <div class="col-sm">
+              <h5>What are these reflectors?</h5>
+              <p>The optical architecture that these reflectors use are categorized as free-space
+                combiners. They have a few properties that make them a good choice:
+                <ul>
+                  <li>Yield good see-through</li>
+                  <li>Reduced distortion</li>
+                  <li>Good color fidelity</li>
+                  <li>Low LCA</li>
+                </ul>
+              </p>
+              <h5>Why use these?</h5>
+              <p>While this type of free space combiner is low cost they are still in order of difficulty 
+                to design and manufacture on your own. It is better to use existing solution that is highly accessible
+                and are available in great supply. 
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- BEGINNING OF REMOVE REFLECTORS -->
+        <h4 style="margin-top: 50px; margin-bottom: 25px;">
+          How to remove the reflectors (4 steps):
+        </h4>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img src="Images/removeScrews.png" alt="" width="480" height="356">
+            </div>
+            <div class="col-sm">
+              <h4>1. Remove all screws</h4>
+              <p>Turn the headset upside down and start to unscrew all screws that are visible.
+                 Make sure to use an appropriate screw driver as you don't want to strip the screws. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 15px;">
+          <div class="row">
+            <div class="col-sm">
+              <img src="Images/seperate.png" alt="" width="480" height="356">
+            </div>
+            <div class="col-sm">
+              <h4>2. Seperate the two main pieces</h4>
+              <p>
+                After the screws are removed you should be able to remove the bottom half 
+                from the top half. Once that is done you should have access to the optics bracket
+                that is holding the reflectors. Remove the 2 screws on top. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 15px;">
+          <div class="row">
+            <div class="col-sm">
+              <img src="Images/rm_lensattacher.png" alt="" width="480" height="356">
+            </div>
+            <div class="col-sm">
+              <h4>3. Unscrew the lens attacher</h4>
+                <p>
+                  Once those screws are removed the reflectors should be free to remove from the 
+                  main bracket. The reflectors are still being held by another part I call the 
+                  lens attacher. Just remove those 2 remaining screws. 
+                </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 15px;">
+          <div class="row">
+            <div class="col-sm">
+              <img src="Images/final_lens.jpg" alt="" width="480" height="356">
+            </div>
+            <div class="col-sm">
+              <h4>4. Remove the lens attacher</h4>
+                  <p>
+                    The reflectors should be completely free after that. Try to grip the reflectors
+                    from the side as you don't want to get finger prints all over its surface. 
+                    Put the reflectors aside for now as they will be used later in the build tutorial.
+                  </p>
+            </div>
+          </div>
+        </div>
+  
+    </div>
+    <!-- END OF AR GLASS -->
+
+    <div id="divider" class="container"></div>
+
+    <div class="container">
+      <h4 style="margin-top: 50px;">Assembly Steps</h4>
+      <p>Be patient</p>
+    </div>
+
  
     
  
