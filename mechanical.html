@@ -40,7 +40,7 @@
       </div>
  
      <div id="title-page" class="container">
-         <h4>Offical Triton Assembly Tutorial</h4>
+         <h4>Official Triton Assembly Tutorial</h4>
      </div>
 
      <div id="divider" class="container"></div>
@@ -52,13 +52,13 @@
           <div class="col">
             <h5>Overview</h5>
             <p style="text-align: left;">
-             The Triton's design currently consists of 18 modular parts. 
-             15 of which are custom designed 3d printed parts. There are
+             The Triton's design currently consists of 24 modular parts. 
+             17 of which are custom designed 3d printed parts. There are
              3 main parts which can be bought off the shelf: the display,
-             vr headstrap, and the optical reflector. 
+             vr head strap, and the optical reflector. 
             </p>
             <p style="text-align: left;">
-             Below I've listed the offical bill of materials (BOM). I've designated links to where
+             Below I've listed the official bill of materials (BOM). I've designated links to where
              you can purchase these parts, although there are a few alternatives
              as to where you can buy them. I've listed the estimated price of these
              parts but I have not factored in cost of shipping. 
@@ -148,7 +148,7 @@
     <div class="container" id="display" style="margin-top: 50px;">
       <h3 style="margin-bottom: 25px;">Notes:</h3>
       <h4>A. 6 inch 2k LCD display</h4>
-      <p>This LCD panel was develped by the WeiWei team. The resolution listed is 
+      <p>This LCD panel was developed by the WeiWei team. The resolution listed is 
         1440(RGB)x2560 with a refresh rate of 60Hz. What is shipped is shown below. 
       </p>
       <img src="Images/2kdisplay.jpg" alt="" width="500" height="356">
@@ -283,11 +283,14 @@
 
     <div id="divider" class="container"></div>
 
+<!-- ==================================================== -->
+    <!-- ASSEMBLY PART 1 -->
+
     <div class="container">
       <h4 style="margin-top: 50px;">
         Assembly Steps - Part 1 (10 Steps)
       </h4>
-      <p>Be patient</p>
+      <p>I have given names to all of the 3d printed parts. You can reference the names here.</p>
     </div>
 
     <!-- STEP 1 -->
@@ -340,7 +343,11 @@
       </div>
 
       <p style="margin-top: 15px;">
-        Slide the display panel into the display tray. 
+        Slide the display panel into the display tray. While the screen is facing towards you
+        the display tray should be inserted with the buckle clip on the side pointing to the left.
+        <b>Gently fold the FPC cable down towards the back surface of the display tray and slowly
+          move the tray into the brackets. 
+        </b>
       </p>
 
       <div class="container">
@@ -355,7 +362,14 @@
       </div>
 
       <p style="margin-top: 15px;">
-        Slide the display panel into the display tray. 
+        Slide the display tray all the way down until the buckle clips in to the bracket. 
+        You might want to double check that it clips in with a flat screw driver. This is what prevents
+        the display tray from falling out. <b>The display tray will protrude on top, I'm aware 
+        of this.</b> If I had made the display brackets any longer than the display tray would have
+        been visible in your line of sight affecting FOV. I decided to sacrifice the aesthetic 
+        and chose to preserve FOV. <b>I am experimenting with smaller displays to fix this in a future
+        hardware update. 
+        </b>
       </p>
 
     </div>
@@ -375,17 +389,19 @@
       </div>
 
       <p style="margin-top: 15px;">
-        <ol>
-          <li>Join together the 2 lens attachment pieces. Do this by connecting through
-            the holes located near the top of the reflector. 
-          </li>
-          <li>Insert the reflector into the lens port located on the bottom of the halo.
-            Screw in the reflector until firmly attached to the halo. 
-          </li>
-        </ol>
+        If there is a lot of friction trying to insert the strap holders into the halo try sanding
+        down the outer extension of the strap holder. <b>If a strap holder doesn't go all the way in 
+        there may be some leftover filament from the support structures.</b> Use an exacto knife to scrape
+        out any remaining excess. After successfully inserting the strap holders insert the pegs through the 
+        holes of the halo. If there is a lot of friction try placing the halo on its side on a flat table and 
+        pressing down. 
       </p>
 
       <img src="Images/boltLock.jpg" alt="" width="400" height="296">
+      <p style="margin-top: 15px;">
+        Use the 3d printed nuts to lock in the pegs. The end of the pegs should be threaded allowing
+        for the nuts to easily twist on.  
+      </p>
     </div>
 
     <!-- STEP 5 -->
@@ -401,8 +417,15 @@
           </div>
         </div>
       </div>
-      <p style="margin-top: 15px;">Take the left and right display brackets and insert them into the grooves.
-         The use a screw driver to screw in the brackets until they are firmly secure. 
+      <p style="margin-top: 15px;">
+        Line up the FM (FPC/MIPI) connector over the screws holes on the bottom of the rosen bridge. 
+        <b>There are 4 screw holes but I recommend only using the 2 on the left side of the connector.</b> 
+        The holes on that side of PCB are much larger and are less likely to damage the board. Tightly
+        screwing those in will do more than enough to firmly secure the board. 
+      </p>
+      <p>
+        After that is done I would recommend clipping in the MIPI flex connector. This will make your life
+        easier as you will see how the rosen bridge gets attached to the halo. 
       </p>
     </div>
 
@@ -419,10 +442,16 @@
           </div>
         </div>
       </div>
-      <p style="margin-top: 15px;">Take the left and right display brackets and insert them into the grooves.
-         The use a screw driver to screw in the brackets until they are firmly secure. 
+      <p style="margin-top: 15px;">
+        <b>Important Note: To firmly secure the rosen bridge to the halo I used a thicker screw {ADD SPEC}</b>
+        I would recommend first screwing into the holes of where the bridge is supposed to go inorder 
+        to create threads in the plastic. Firmly secure the rosen bridge to the halo. If the rosen bridge angles
+        upwards from it being screwed so tightly its not a problem. The top cover will press it down creating 
+        enough for force to firmly secure the bridge. 
       </p>
       <h5 style="margin-top: 15px;">IMPORTANT: Connect FPC cable before moving to next step</h5>
+      <p>Connect the fpc cable now as adding the head press in the next step will block access to
+        the FM connector</p>
       <img src="Images/fpc.jpg" alt="" width="400" height="296">
     </div>
 
@@ -439,10 +468,16 @@
             </div>
           </div>
         </div>
-        <p style="margin-top: 15px;">Take the left and right display brackets and insert them into the grooves.
-           The use a screw driver to screw in the brackets until they are firmly secure. 
+        <p style="margin-top: 15px;">
+          Line up the legs of the rosen bridge with the 2 cut outs on the head press. If you have trouble
+          with legs inserting all the way than there may be access support material still inside the cut outs. 
+          Once successfully inserted use 2 screws from the back of the head press to securely fasten the head press
+          to the rosen bridge. 
         </p>
         <h5>Note: attaching the vr headstrap now is the easiest</h5>
+        <p>This is only because the LCD driver mount will be slightly blocking the hole that the 
+          head strap pulls through. 
+        </p>
         <img src="Images/vrstrap.jpg" alt="" width="400" height="296">
       </div>
 
@@ -461,14 +496,9 @@
         </div>
   
         <p style="margin-top: 15px;">
-          <ol>
-            <li>Join together the 2 lens attachment pieces. Do this by connecting through
-              the holes located near the top of the reflector. 
-            </li>
-            <li>Insert the reflector into the lens port located on the bottom of the halo.
-              Screw in the reflector until firmly attached to the halo. 
-            </li>
-          </ol>
+          Line up the LCD driver mount holes with the top cover and use 3 screws to securely fasten.
+          Next you can use a <b>minimum of 2 screws </b>to fasten the LCD driver board to the surface of the driver
+          stand. 
         </p>
       </div>
 
@@ -487,14 +517,8 @@
         </div>
   
         <p style="margin-top: 15px;">
-          <ol>
-            <li>Join together the 2 lens attachment pieces. Do this by connecting through
-              the holes located near the top of the reflector. 
-            </li>
-            <li>Insert the reflector into the lens port located on the bottom of the halo.
-              Screw in the reflector until firmly attached to the halo. 
-            </li>
-          </ol>
+         Once the driver mount system is setup you can use 4 screws to attach the top cover to the 
+         top of the halo. You may need to slide down the flex cable in order to clip it into the board. 
         </p>
       </div>
 
@@ -502,10 +526,13 @@
     <div class="container" style="margin-top: 25px; margin-bottom: 75px;">
       <h5>Step 10 - Slide in leap motion case</h5>
       <img src="Images/slideInLeap.png" alt="" width="500" height="356">
-      <p style="margin-top: 15px;">Take the left and right display brackets and insert them into the grooves.
-         The use a screw driver to screw in the brackets until they are firmly secure. 
+      <p style="margin-top: 15px;">
+        Lastly, you can then slide in the leap motion case. The easiest part of this assembly.
       </p>
       <img src="Images/BuiltView.jpg" alt="" width="500" height="356">
+      <p style="margin-top: 15px;">Congrats you've completed building the Triton. You can move on to part 2 to see how to prepare the 
+        headset for more user comfort.     
+      </p>
     </div>
 
 
