@@ -43,7 +43,7 @@
              to run on the headset. On the other hand, I have created a custom desktop app that 
              provides a more complete AR user experience and should fast track your project. 
             </p>
-
+            
             <h5>Triton AR Launcher</h5>
             <p style="text-align: left;">
               The Triton AR Launcher is a stand alone desktop app that launches AR content 
@@ -55,7 +55,7 @@
              <p style="text-align: left;">
                Upon purchase of the Triton AR Launcher you have the option to receive a link 
                to the github repository. From there you'll have full access to the source code in which you
-               can modify the code to fit your project needs. The Triton Project has entirely been built on
+               can modify the code to fit your project needs. The Triton Project has entirely been built with
                Javascript with the use of frameworks such as electron.js, three.js, and leap.js. 
              </p>
 
@@ -67,11 +67,12 @@
               <h5>System requirements</h5>
               <p>Recommended<p>
               <p style="margin-bottom: 5px;"><b>OS: </b>Windows 10</p>
-              <p style="margin-bottom: 5px;" ><b>Processor: </b>i7</p>
-              <p style="margin-bottom: 5px;"><b>Memory: </b>512mb</p>
-              <p style="margin-bottom: 5px;"><b>Graphics: </b>GTX 760</p>
-              <p style="margin-bottom: 5px;"><b>Storage: </b>1GB</p>
+              <p style="margin-bottom: 5px;" ><b>Processor: </b>Intel Core i7-4820k @3.70GHz</p>
+              <p style="margin-bottom: 5px;"><b>Memory: </b>8 GB</p>
+              <p style="margin-bottom: 5px;"><b>Graphics: </b>GeForce GTX 760</p>
+              <p style="margin-bottom: 5px;"><b>Storage: </b>200MB</p>
             </div>
+
 
            
           </div>
@@ -82,7 +83,18 @@
     </div>
 
     <div id="title-page" class="container" style="margin-top: 75px;">
-      <h4>Installation</h4>
+      <h4 style="text-align: left;">Table of Contents</h4>
+      <ol style="text-align: left;">
+        <li><a href="#install">Installation</a></li>
+        <li><a href="#guide">User Guide</a> </li>
+        <li><a href="#navigate"> Navigating Triton</a></li>
+        <li><a href="#setup">Additional setup</a></li>
+      </ol>
+    </div>
+
+
+    <div id="title-page" class="container" style="margin-top: 75px;">
+      <h4 id="install">Installation</h4>
       <div id="divider" class="container"></div>
     </div>
 
@@ -104,11 +116,152 @@
          <img src="Images/createShortCut.png" alt="" width="492" height="312">
         </div>
       </div>
+      <div style="margin-top: 45px; text-align: left;">
+        <h5>Installing Leap Motion</h5>
+        <p>The Triton AR Launcher uses the leap motion Orion SDK for all hand tracking and user input.
+           In order to use the leap motion with the Triton AR launcher <b> the Leap Motion Windows 
+           drivers must be installed.</b>
+           The necessary software can be downloaded and installed <a href="https://developer.leapmotion.com/orion#105">here</a>
+        </p>
+      </div>
+     
     </div>
 
+    <div id="title-page" class="container" style="margin-top: 75px;">
+      <h4 id="guide">User Guide</h4>
+      <div id="divider" class="container"></div>
+    </div>
  
-    
+    <div class="container" style="margin-top: 50px; text-align: center;">
+      <img src="Images/userGuide.png" alt="" width="840" height="480">
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>A. Adjusting screen position</b></p>
+        <p>The official screen resolution for the 2k 6inch display is listed as 2560x1440.
+           Electron uses Chromium multi-process architecture to display multiple windows.
+           In order to move a window onto the Triton display x and y positioning values are used.
+           The x value should correspond the screen's width (2560) and the y value should correspond
+           to the screen's height(1440).
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>B. Setting up stereo comfort</b></p>
+        <p>
+          The Triton takes into account the variability in human interpupillary distances (IPD).
+          If you do not know your IPD you can manually find it by using the IPD finder tutorial.
+          Finding the near correct IPD is an absolute necessity to create the impression of 3d depth.
+          <b>IPD should be input as decimal increments 0.064 = 64mm.</b>
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>C. Starting and ending a session</b></p>
+        <p>Clicking launch will immediately send a window to the Triton display. Clicking end session
+           will kill the Triton window. End session will also close the leap motion hand demo window.
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>D. Screen controls and debugging</b></p>
+        <p>
+          Full screen will enable any sub windows to automatically fill the Triton's display. Disabling it 
+          will have the effect of making the window into a small window pane. The window will not be draggable with 
+          a cursor but instead relies on inputs from the screen position fields. 
+          Electron's architecture is built on top of Chromium thus enabling dev tools will open the standard 
+          Google Chrome developer tools. You can use dev tools to debug any issues with your project. 
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>E. Enable leap motion</b></p>
+        <p>
+          If you do not plan to use the leap motion in your Triton Project then you can choose to leave it disabled.
+          Enabling the leap motion will automatically run all underlying code necessary code for hand tracking. 
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>E. Leap bone hands customization</b></p>
+        <p>
+          The leap motion uses a skeletal visualization called bone hands that overlay three.js graphics onto 
+          your finger positions in real time. The bone hands visual is incredibly useful for hand object coordination
+          when performing any interaction in AR. These fields allow you to customize the look of those three.js
+          graphics. 
+          <p><b>Important notes:</b></p>
+          <ul>
+            <li>Bone & joint colors: only takes hex values, do NOT put # symbol in front of the hex. Example: 5aad00</li>
+            <li>Bone & joint scale: Please type in fractions with no spacing. Example: 1/12 or 1/8</li>
+          </ul>
+        </p>
+      </div>
+
+      <div style="text-align: left; margin-top: 45px;">
+        <p><b>F. Save configuration</b></p>
+        <p>
+          Clicking show demo scene will launch an isolated sample scene so you can view the bone hands visualization.
+          <b>If you want the changes to take effect you must first click save hand configuration.</b> This will save
+          your changes to a config file so that every time you launch a scene your bone hands settings will be loaded.
+        </p>
+      </div>
+    </div>
+
+    <div id="title-page" class="container" style="margin-top: 75px;">
+      <h4 id="navigate">Navigating Triton</h4>
+      <div id="divider" class="container"></div>
+    </div>
+
+    <div class="container" style="text-align: center;">
+      <img src="Images/palmMenu.png" alt="" width="412" height="412" style="margin-top: 50px;">
+      <div style="margin-top: 25px; text-align: left;">
+        <p><b>Triton Palm Menu</b></p>
+        <p>The Triton palm menu is a dedicated AR menu that attaches to the palm position of the left hand.
+           Apps are to be containerized and placed into cells A-D on the menu. The hand right hand index is 
+           used a cursor to click on the menu cells. In a future update I will include support for people who
+           are left hand dominate. 
+        </p>
+        <div style="text-align: center;">
+          <img src="Images/tritonPaint.png" alt="" width="412" height="412">
+        </div>
+        <p style="margin-top: 25px;">
+          1 demo app, Triton Paint, is included with the Triton menu which can be activated through clicking cell A. 
+          To exit Triton Paint make a closed fist with your left hand and you will be returned to the main menu. 
+        </p>
+      </div>
+    </div>
  
+    <div id="title-page" class="container" style="margin-top: 75px;">
+      <h4 id="setup">Additional Setup and Troubleshooting</h4>
+      <div id="divider" class="container"></div>
+    </div>
+
+    <div class="container" style="margin-top: 50px;">
+      <h5 style="text-align: left;">Display setup</h5>
+      <img src="Images/displaySettings.png" alt="" width="662" height="512">
+      <p style="text-align: left; margin-top: 25px;">
+        After plugging in the 2k display it should register in the Windows display settings. Inside 
+        display settings under Multiple displays make sure to select "extend these displays". For 
+        display resolution use 2560 x 1440. Display orientation should be set to landscape.
+      </p>
+    </div>
+
+    <div class="container" style="margin-top: 50px;">
+      <h5 style="text-align: left;">Leap Motion Troubleshooting</h5>
+      <img src="Images/leapIcon.png" alt="" width="276" height="180">
+      <p style="text-align: left; margin-top: 25px;">
+        After installing the leap motion drivers a quick access icon should be added to the windows task bar.
+        If the leap icon is black right click the icon and click resume tracking. 
+      </p>
+      <img src="Images/allowLeap.png" alt="" width="662" height="512">
+      <p style="text-align: left; margin-top: 25px;">
+        <b>IMPORTANT:</b>
+        <p>
+          Since the TritonARLauncher is built on top of web technology and utilizes the Leap Motion javascript SDK
+          it is considered a web app. Make sure to check that 'Allow Web Apps' is enabled or else the leap motion will
+          not work with the Triton AR launcher. 
+        </p>
+      </p>
+    </div>
     
  
      <!-- Footer -->
